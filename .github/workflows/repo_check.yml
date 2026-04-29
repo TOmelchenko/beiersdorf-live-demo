@@ -24,6 +24,6 @@ jobs:
           test -f databricks.yml
           test -f config/project_config.yml
           test -d docs
-          test -d notebooks
-          test -d sample_data
-          test -d sql
+          test -d src/notebooks
+          test -d src/data/sample_data
+          test -d src/sql
