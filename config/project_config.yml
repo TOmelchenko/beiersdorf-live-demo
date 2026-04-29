@@ -1,1 +1,35 @@
+company: Beiersdorf
+theme: market_reporting_pipeline
 
+catalog: beiersdorf_dev
+schema: reporting
+
+volumes:
+  landing: landing
+  checkpoints: checkpoints
+
+paths:
+  sales_subpath: sales
+  inventory_subpath: inventory
+
+tables:
+  bronze_sales: bronze_sales
+  silver_sales: silver_sales
+  gold_market_daily_summary: gold_market_daily_summary
+  gold_brand_summary: gold_brand_summary
+  gold_inventory_summary: gold_inventory_summary
+
+rules:
+  high_value_threshold: 10000
+  allowed_markets:
+    - ALL
+    - DE
+    - FR
+    - ES
+    - IT
+  allowed_brands:
+    - ALL
+    - NIVEA
+    - EUCERIN
+    - LABELLO
+    - HANSAPLAST
