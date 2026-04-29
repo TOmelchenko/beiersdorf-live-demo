@@ -23,3 +23,9 @@ def filter_brand(brand):
             return df
         return df.filter(F.col("brand") == brand)
     return _transform
+
+
+def filter_report_date(report_date):
+    def _transform(df):
+        return df.filter(F.col("report_date") == report_date)
+    return _transform
